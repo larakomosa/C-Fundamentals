@@ -3,7 +3,6 @@ using System.Security.AccessControl;
 using System.Security;
 using System.Globalization;
 using System;
-using System.Collections.Generic;
 
 namespace GradeBook
 {
@@ -11,23 +10,22 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            var numbers = new[] {12.7,10.3,6.11,4.1};
-            var grades = new List<double>() {12.7,10.3,6.11,4.1};
-      grades.Add(56.1);
+            var book = new Book();
+            book.AddGrade(89.1);
+            book.AddGrade(90.5);
+            book.grades.Add(101);
 
-var result = 0.0; 
-foreach(var number in grades){
-    result += number;
-}
-result/=grades.Count;
-Console.WriteLine($"The average grade is {result}");
-            if(args.Length>0)
+            var grades = new List<double>() { 12.7, 10.3, 6.11, 4.1 };
+            grades.Add(56.1);
+
+
+            var result = 0.0;
+            foreach (var number in grades)
             {
-            System.Console.WriteLine("Hello" + args[0] + "!");
+                result += number;
+            }
+            result /= grades.Count;
+            Console.WriteLine($"The average grade is {result}");
         }
-        else
-        {
-            Console.WriteLine("Yello!");
-        }
-        }
-        }}
+    }
+}
