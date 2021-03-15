@@ -1,14 +1,15 @@
 using System.Globalization;
 using System.Collections.Generic;
 
-namespace Gradebook
+namespace GradeBook
 {
     class Book
     {
         public void AddGrade(double grade)
         {
-            grades.Add(grade);
+
         }
+        List<double> grades;
     }
-    List<double> grades;
+
 }
